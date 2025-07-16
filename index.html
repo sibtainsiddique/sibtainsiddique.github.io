@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibtain Siddique - Web Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Gray */
+        }
+        .hero-bg {
+            background-color: #1a202c;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #4f46e5, #3b82f6);
+        }
+        .subtle-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-800">Sibtain Siddique</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
+                <a href="#journey" class="text-gray-600 hover:text-indigo-600 transition duration-300">Journey</a>
+                <a href="#contact" class="bg-indigo-600 text-white py-2 px-5 rounded-full hover:bg-indigo-700 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
+            <a href="#skills" class="block py-2 text-gray-600 hover:text-indigo-600">Skills</a>
+            <a href="#journey" class="block py-2 text-gray-600 hover:text-indigo-600">Journey</a>
+            <a href="#contact" class="block mt-2 bg-indigo-600 text-white text-center py-2 px-5 rounded-full hover:bg-indigo-700">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-28 md:py-36 text-center">
+                <!-- TODO: When you have a professional photo, you can add it here. For now, the focus is on your name and skills. -->
+                <!-- <img src="your-photo-link.jpg" alt="Sibtain Siddique" class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-gray-700"> -->
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Sibtain Siddique</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                    A Passionate <span class="text-gradient font-semibold">Web Developer</span>
+                </p>
+                <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-10">
+                    I build modern, responsive, and user-friendly web applications using the latest technologies.
+                </p>
+                <a href="#contact" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300 text-lg">
+                    Connect With Me
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12">About Me</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                    I am a dedicated developer with a strong passion for technology and problem-solving. My expertise lies in both front-end and back-end development, using tools like **Python** and **Django** to create robust server-side applications, and **React** to build dynamic, interactive user interfaces. I am committed to writing clean, efficient code and am always excited to learn and apply new skills to create exceptional web experiences.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12">My Technical Skills</h2>
+                <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 max-w-4xl mx-auto">
+                    <div class="flex items-center bg-white p-3 rounded-lg subtle-shadow">
+                        <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="Python" class="w-8 h-8 mr-3">
+                        <span class="text-lg font-medium">Python</span>
+                    </div>
+                    <div class="flex items-center bg-white p-3 rounded-lg subtle-shadow">
+                        <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg" alt="Django" class="w-8 h-8 mr-3">
+                        <span class="text-lg font-medium">Django</span>
+                    </div>
+                    <div class="flex items-center bg-white p-3 rounded-lg subtle-shadow">
+                        <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" class="w-8 h-8 mr-3">
+                        <span class="text-lg font-medium">React</span>
+                    </div>
+                    <div class="flex items-center bg-white p-3 rounded-lg subtle-shadow">
+                        <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" class="w-8 h-8 mr-3">
+                        <span class="text-lg font-medium">JavaScript</span>
+                    </div>
+                    <div class="flex items-center bg-white p-3 rounded-lg subtle-shadow">
+                        <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="HTML5" class="w-8 h-8 mr-3">
+                        <span class="text-lg font-medium">HTML5</span>
+                    </div>
+                    <div class="flex items-center bg-white p-3 rounded-lg subtle-shadow">
+                        <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="CSS3" class="w-8 h-8 mr-3">
+                        <span class="text-lg font-medium">CSS3</span>
+                    </div>
+                     <div class="flex items-center bg-white p-3 rounded-lg subtle-shadow">
+                        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" class="w-8 h-8 mr-3">
+                        <span class="text-lg font-medium">Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Learning Journey Section -->
+        <section id="journey" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12">My Learning Journey</h2>
+                <div class="max-w-2xl mx-auto bg-indigo-50 p-8 rounded-lg border border-indigo-200">
+                    <i class="fas fa-rocket text-4xl text-indigo-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Actively Building</h3>
+                    <p class="text-lg text-gray-700">
+                        I am currently focused on applying my skills by building a portfolio of projects. My goal is to create real-world applications that solve problems and demonstrate my capabilities as a developer. Check out my GitHub to follow my progress!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Let's Get In Touch</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-8">
+                    I am actively looking for new opportunities and collaborations. Feel free to send me an email or connect with me on my social profiles.
+                </p>
+                <div class="flex justify-center items-center space-x-8 text-4xl text-gray-700">
+                    <a href="https://www.linkedin.com/in/sibtain-siddique-4320112bb/" target="_blank" class="hover:text-indigo-600 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sibtainsiddique" target="_blank" class="hover:text-indigo-600 transition duration-300"><i class="fab fa-github"></i></a>
+                    <a href="mailto:sibtainsiddique777@gmail.com" class="hover:text-indigo-600 transition duration-300"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Sibtain Siddique. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
