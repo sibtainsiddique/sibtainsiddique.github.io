@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sibtain Siddique | AWS Cloud Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sibtain Siddique | AWS Cloud Portfolio</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
-  <style>
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-    }
+<style>
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+  }
 
-    /* 🔥 IMPORTANT FIX */
-    #app{
-      min-height:100vh;
-      background: radial-gradient(circle at top, #4c1d95, #020617);
-      color:#e5e7eb;
-    }
+  /* 🔥 WRAPPER FIX */
+  #app{
+    min-height:100vh;
+    background: radial-gradient(circle at top, #4c1d95, #020617);
+    color:#e5e7eb;
+    overflow-x:hidden;
+  }
 
-    .glass{
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(16px);
-      border:1px solid rgba(255,255,255,0.15);
-    }
+  .glass{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,0.15);
+  }
 
-    .text-gradient{
-      background:linear-gradient(to right,#a855f7,#f59e0b);
-      -webkit-background-clip:text;
-      color:transparent;
-    }
+  .text-gradient{
+    background:linear-gradient(to right,#a855f7,#f59e0b);
+    -webkit-background-clip:text;
+    color:transparent;
+  }
 
-    .glow:hover{
-      box-shadow:0 0 35px rgba(168,85,247,.6);
-    }
-  </style>
+  .glow:hover{
+    box-shadow:0 0 35px rgba(168,85,247,.6);
+  }
+
+  /* 🌊 Scroll Animation */
+  .reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .9s ease;
+  }
+  .reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+</style>
 </head>
 
 <body>
 
-<!-- 🔴 WRAPPER (VERY IMPORTANT) -->
 <div id="app">
 
-<!-- NAVBAR -->
-<header class="sticky top-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+<!-- NAV -->
+<header class="fixed w-full z-50 bg-black/40 backdrop-blur border-b border-white/10">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <span class="font-bold text-xl">Sibtain</span>
     <div class="space-x-6 hidden md:block">
@@ -64,14 +75,17 @@
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center pt-24">
-  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<section class="min-h-screen flex items-center pt-28">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center reveal">
     <div>
       <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-gradient">
         AWS Cloud<br>Portfolio
       </h1>
-      <p class="text-xl text-gray-300 mb-6">
-        Hi, I'm <b>Sibtain Siddique</b> — an aspiring
+      <h2 class="text-2xl text-gray-300 mb-6">
+        I'm an <span id="typing"></span>
+      </h2>
+      <p class="text-lg text-gray-300 mb-6">
+        Hi, I'm <b>Sibtain Siddique</b> — aspiring
         <b>Cloud Support Engineer</b> with hands-on AWS experience.
       </p>
       <a href="#contact" class="inline-block px-6 py-3 bg-purple-600 rounded-lg glow">
@@ -84,7 +98,7 @@
       <ul class="space-y-3 text-gray-300">
         <li>☁ EC2, S3, IAM, VPC</li>
         <li>🚀 CloudFront CDN</li>
-        <li>🔐 Security Best Practices</li>
+        <li>🔐 IAM & Security</li>
         <li>📈 High Availability</li>
       </ul>
     </div>
@@ -92,7 +106,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-24">
+<section id="about" class="py-24 reveal">
   <div class="container mx-auto px-6 max-w-4xl">
     <h2 class="text-4xl font-bold mb-6 text-gradient">About Me</h2>
     <div class="glass p-8 rounded-xl">
@@ -110,25 +124,25 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-24">
+<section id="projects" class="py-24 reveal">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-bold mb-10 text-gradient">Projects</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="glass p-6 rounded-xl glow">
-        <h3 class="text-xl font-bold mb-2">Weather Web Application</h3>
+        <h3 class="text-xl font-bold mb-2">Weather Web App</h3>
         <p class="text-gray-300 text-sm">
           Static website hosted on Amazon S3 and delivered globally
           using AWS CloudFront CDN with real-time weather API.
         </p>
       </div>
-      <div class="glass p-6 rounded-xl opacity-60">More AWS Projects Coming Soon</div>
+      <div class="glass p-6 rounded-xl opacity-60">More AWS Projects Soon</div>
       <div class="glass p-6 rounded-xl opacity-60">Automation Labs Planned</div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-24">
+<section id="skills" class="py-24 reveal">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-bold mb-10 text-gradient">Skills</h2>
     <div class="flex flex-wrap gap-4">
@@ -145,7 +159,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-24 text-center">
+<section id="contact" class="py-24 text-center reveal">
   <h2 class="text-4xl font-bold mb-6 text-gradient">Get In Touch</h2>
   <p class="text-gray-300 mb-2">
     Open to Cloud Support Engineer opportunities
@@ -158,7 +172,29 @@
 </footer>
 
 </div>
-<!-- 🔴 END WRAPPER -->
+
+<!-- 🔥 JS ANIMATIONS -->
+<script>
+/* Typing animation */
+const words=["AWS Cloud Enthusiast","Cloud Support Engineer Aspirant","AWS Learner"];
+let i=0,j=0,del=false;
+const el=document.getElementById("typing");
+(function type(){
+  el.textContent=words[i].substring(0,j+=(del?-1:1));
+  if(!del&&j===words[i].length)setTimeout(()=>del=true,1200);
+  if(del&&j===0){del=false;i=(i+1)%words.length;}
+  setTimeout(type,del?80:120);
+})();
+
+/* Scroll reveal */
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add("visible");
+  });
+},{threshold:.15});
+reveals.forEach(r=>observer.observe(r));
+</script>
 
 </body>
 </html>
