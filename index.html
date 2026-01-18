@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sibtain Siddique - Cloud & DevOps Enthusiast</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Sibtain Siddique - AWS Cloud Enthusiast</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Google Fonts: Inter -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -22,41 +23,26 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            background-image: linear-gradient(to right, #3b82f6, #60a5fa, #0ea5e9);
+            background-image: linear-gradient(to right, #f59e0b, #f97316, #facc15);
         }
         .border-gradient {
             border: 2px solid;
             border-image-slice: 1;
-            border-image-source: linear-gradient(to right, #3b82f6, #0ea5e9);
+            border-image-source: linear-gradient(to right, #f59e0b, #f97316);
         }
-        /* Glassmorphism Card Style */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .glow-on-hover:hover {
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
             transform: translateY(-5px);
         }
-
-        /* Typing Animation */
-        .typed-cursor {
-            opacity: 1;
-            animation: blink 0.7s infinite;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Scroll Animations */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: 0.8s;
         }
         .reveal.visible {
             opacity: 1;
@@ -64,254 +50,113 @@
         }
     </style>
 </head>
+
 <body class="antialiased">
 
-    <!-- Header -->
-    <header class="bg-black/50 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-800">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white">Sibtain Siddique</a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
-                <a href="#focus" class="text-gray-300 hover:text-white transition duration-300">Focus</a>
-                <a href="#projects" class="text-gray-300 hover:text-white transition duration-300">Projects</a>
-                <a href="#skills" class="text-gray-300 hover:text-white transition duration-300">Skills</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-2xl text-white">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-            <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
-            <a href="#focus" class="block py-2 text-gray-300 hover:text-white">Focus</a>
-            <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
-            <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+<header class="bg-black/50 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-800">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-xl font-bold text-white">Sibtain Siddique</a>
+        <div class="hidden md:flex space-x-8">
+            <a href="#about">About</a>
+            <a href="#focus">Focus</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </div>
-    </header>
+    </nav>
+</header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center">
-            <div class="container mx-auto px-6 py-28 md:py-36">
-                <div class="max-w-4xl">
-                    <p class="text-lg text-gray-400 mb-2">Hey, I'm</p>
-                    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-gradient">Sibtain Siddique.</h1>
-                    <h2 class="text-4xl md:text-6xl font-extrabold text-gray-400 mb-8">
-                        I'm <span id="typing-effect"></span><span class="typed-cursor">|</span>
-                    </h2>
-                    <p class="max-w-xl text-lg text-gray-400 mb-10 reveal">
-                        I'm a passionate cloud enthusiast specializing in Microsoft Azure, focused on building scalable, reliable, and automated infrastructure.
-                    </p>
-                    <div class="flex flex-wrap gap-4 reveal">
-                        <a href="#contact" class="px-6 py-3 font-semibold text-white border-gradient glow-on-hover transition-all duration-300">
-                            Get In Touch <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                        <a href="https://github.com/sibtainsiddique" target="_blank" class="px-6 py-3 font-semibold text-white border-gradient glow-on-hover transition-all duration-300">
-                            <i class="fab fa-github mr-2"></i> View GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="min-h-screen flex items-center">
+    <div class="container mx-auto px-6">
+        <h1 class="text-6xl font-extrabold text-gradient mb-4">Sibtain Siddique</h1>
+        <h2 class="text-4xl text-gray-400 mb-6">
+            I'm <span id="typing-effect"></span>|
+        </h2>
+        <p class="max-w-xl text-lg text-gray-400">
+            AWS Cloud Computing enthusiast focused on building scalable, secure,
+            and high-availability cloud solutions.
+        </p>
+    </div>
+</section>
 
-        <!-- About Me Section -->
-        <section id="about" class="py-24">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="text-3xl font-bold mb-2 flex items-center"><span class="text-gradient text-xl mr-3">01.</span> About Me</h2>
-                <div class="w-24 h-px bg-gray-700 my-6"></div>
-                <p class="max-w-3xl text-lg text-gray-400 leading-relaxed">
-                    I am a dedicated technology enthusiast and BCA student with a strong passion for <strong>Cloud Computing</strong>. My expertise is centered around the <strong>Microsoft Azure</strong> ecosystem, where I focus on deploying, managing, and automating cloud infrastructure. I leverage my skills in <strong>Python</strong> for scripting and automation to create efficient and scalable solutions. I am committed to learning best practices in cloud architecture and DevOps, and I am always excited to apply my knowledge to solve real-world challenges.
-                </p>
-            </div>
-        </section>
+<section id="about" class="py-24 reveal">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">About Me</h2>
+        <p class="max-w-3xl text-lg text-gray-400">
+            I am a BCA student and cloud computing enthusiast with a strong focus
+            on <strong>Amazon Web Services (AWS)</strong>. I have hands-on experience
+            with EC2, S3, IAM, VPC, and CloudFront.
+            <br><br>
+            During my internship at <strong>Ardent Computech</strong>, I built and
+            deployed a <strong>Weather Web Application</strong> using Amazon S3
+            and AWS CloudFront, delivering content globally using CDN.
+        </p>
+    </div>
+</section>
 
-        <!-- Core Focus Section -->
-        <section id="focus" class="py-24">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="text-3xl font-bold mb-2 flex items-center"><span class="text-gradient text-xl mr-3">02.</span> Core Focus Areas</h2>
-                <div class="w-24 h-px bg-gray-700 my-6"></div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="glass-card rounded-lg p-6 text-center">
-                        <i class="fas fa-cloud text-4xl text-blue-400 mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">Cloud Infrastructure</h3>
-                        <p class="text-gray-400">Designing and deploying scalable infrastructure on Microsoft Azure.</p>
-                    </div>
-                    <div class="glass-card rounded-lg p-6 text-center">
-                        <i class="fas fa-cogs text-4xl text-sky-400 mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">Automation & IaC</h3>
-                        <p class="text-gray-400">Using Python and ARM/Terraform for Infrastructure as Code.</p>
-                    </div>
-                    <div class="glass-card rounded-lg p-6 text-center">
-                        <i class="fas fa-sync-alt text-4xl text-cyan-400 mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">CI/CD & DevOps</h3>
-                        <p class="text-gray-400">Building automated pipelines for continuous integration and delivery.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-24">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="text-3xl font-bold mb-2 flex items-center"><span class="text-gradient text-xl mr-3">03.</span> Cloud Projects</h2>
-                <div class="w-24 h-px bg-gray-700 my-6"></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="glass-card rounded-lg p-6 text-left transition-all duration-300 glow-on-hover flex flex-col">
-                        <i class="fas fa-server text-3xl text-blue-400 mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-3">Web App Deployment on Azure</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">Deployed a scalable web application using Azure App Service, configured with a CI/CD pipeline in Azure DevOps for automated builds and releases.</p>
-                        <span class="bg-gray-800 text-gray-400 text-sm font-medium px-3 py-1 rounded-full self-start">In Progress</span>
-                    </div>
-                    <div class="glass-card rounded-lg p-6 text-left transition-all duration-300 glow-on-hover flex flex-col">
-                        <i class="fas fa-code text-3xl text-sky-400 mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-3">Infrastructure as Code (IaC)</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">Automated the creation of a virtual network, subnets, and virtual machines in Azure using ARM templates or Terraform for consistent and repeatable infrastructure.</p>
-                        <span class="bg-gray-800 text-gray-400 text-sm font-medium px-3 py-1 rounded-full self-start">Learning</span>
-                    </div>
-                    <div class="glass-card rounded-lg p-6 text-left transition-all duration-300 glow-on-hover flex flex-col">
-                        <i class="fas fa-bolt text-3xl text-cyan-400 mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-3">Serverless Function App</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">Created a serverless application with Azure Functions to process data from Azure Blob Storage. Triggered by events to perform automated tasks efficiently.</p>
-                        <span class="bg-gray-800 text-gray-400 text-sm font-medium px-3 py-1 rounded-full self-start">Planned</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-24">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="text-3xl font-bold mb-2 flex items-center"><span class="text-gradient text-xl mr-3">04.</span> My Skills</h2>
-                <div class="w-24 h-px bg-gray-700 my-6"></div>
-                <div class="flex flex-wrap gap-3 max-w-3xl">
-                    <span class="bg-gray-800 text-gray-300 font-medium px-4 py-2 rounded-md">Microsoft Azure</span>
-                    <span class="bg-gray-800 text-gray-300 font-medium px-4 py-2 rounded-md">Azure DevOps</span>
-                    <span class="bg-gray-800 text-gray-300 font-medium px-4 py-2 rounded-md">Python</span>
-                    <span class="bg-gray-800 text-gray-300 font-medium px-4 py-2 rounded-md">Infrastructure as Code (IaC)</span>
-                    <span class="bg-gray-800 text-gray-300 font-medium px-4 py-2 rounded-md">CI/CD Pipelines</span>
-                    <span class="bg-gray-800 text-gray-300 font-medium px-4 py-2 rounded-md">Virtual Networking</span>
-                    <span class="bg-gray-800 text-gray-300 font-medium px-4 py-2 rounded-md">Git & GitHub</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 text-center">
-            <div class="container mx-auto px-6 reveal">
-                <h2 class="text-3xl font-bold mb-2 text-gradient">What's Next?</h2>
-                <h3 class="text-4xl font-extrabold text-white mb-4">Get In Touch</h3>
-                <p class="max-w-xl mx-auto text-lg text-gray-400 mb-8">
-                    I'm actively looking for new opportunities in the cloud computing space. My inbox is always open, so feel free to connect or send me an email.
-                </p>
-                <div class="flex flex-col items-center space-y-4">
-                    <div class="flex items-center bg-gray-900/50 p-2 rounded-lg border border-gray-700">
-                        <span id="email-text" class="text-lg text-gray-300 mr-4 pl-2">sibtainsiddique777@gmail.com</span>
-                        <button id="copy-email-button" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">
-                            <i class="fas fa-copy mr-2"></i>Copy
-                        </button>
-                    </div>
-                    <div id="copy-success-message" class="text-green-400 font-medium opacity-0 transition-opacity duration-300">Email copied!</div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-6">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <div class="flex justify-center space-x-6 mb-4 text-2xl">
-                <a href="https://github.com/sibtainsiddique" target="_blank" class="hover:text-white transition-colors duration-300"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sibtainsiddique/" target="_blank" class="hover:text-white transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <p>Designed & Built by Sibtain Siddique</p>
+<section id="focus" class="py-24 reveal">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-6 text-center">
+            <i class="fas fa-cloud text-4xl text-orange-400 mb-4"></i>
+            <h3 class="text-xl font-bold">AWS Cloud Infrastructure</h3>
+            <p class="text-gray-400">Designing scalable cloud architecture on AWS</p>
         </div>
-    </footer>
+        <div class="glass-card p-6 text-center">
+            <i class="fas fa-server text-4xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold">Static Hosting & CDN</h3>
+            <p class="text-gray-400">S3 + CloudFront for performance & availability</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+            <i class="fas fa-shield-alt text-4xl text-amber-400 mb-4"></i>
+            <h3 class="text-xl font-bold">Cloud Security</h3>
+            <p class="text-gray-400">IAM, best practices & cost optimization</p>
+        </div>
+    </div>
+</section>
 
-    <!-- JavaScript -->
-    <script>
-        // --- Mobile Menu ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
+<section id="projects" class="py-24 reveal">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">Projects</h2>
+        <div class="glass-card p-6">
+            <h3 class="text-xl font-bold mb-2">Weather Web App using AWS CloudFront</h3>
+            <p class="text-gray-400">
+                Built and deployed a weather application using Amazon S3 for
+                static hosting and AWS CloudFront CDN with real-time API integration.
+            </p>
+        </div>
+    </div>
+</section>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+<section id="skills" class="py-24 reveal">
+    <div class="container mx-auto px-6 flex flex-wrap gap-3">
+        <span class="bg-gray-800 px-4 py-2 rounded">AWS</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">EC2</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">S3</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">CloudFront</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">IAM</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">VPC</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">HTML</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">JavaScript</span>
+    </div>
+</section>
 
-        // --- Copy Email to Clipboard ---
-        const copyEmailButton = document.getElementById('copy-email-button');
-        const emailText = document.getElementById('email-text').innerText;
-        const copySuccessMessage = document.getElementById('copy-success-message');
+<section id="contact" class="py-24 text-center reveal">
+    <p class="text-lg text-gray-400">Open to Cloud Support Engineer opportunities</p>
+    <p class="text-xl font-bold">sibtainsiddique777@gmail.com</p>
+</section>
 
-        if (copyEmailButton) {
-            copyEmailButton.addEventListener('click', () => {
-                navigator.clipboard.writeText(emailText).then(() => {
-                    copySuccessMessage.style.opacity = '1';
-                    copyEmailButton.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
-                    
-                    setTimeout(() => {
-                        copySuccessMessage.style.opacity = '0';
-                        copyEmailButton.innerHTML = '<i class="fas fa-copy mr-2"></i>Copy';
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy email: ', err);
-                });
-            });
-        }
-
-        // --- Typing Animation ---
-        const typingElement = document.getElementById('typing-effect');
-        const words = ["a Cloud Engineer", "an Azure Specialist", "a DevOps Enthusiast"];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function type() {
-            const currentWord = words[wordIndex];
-            if (isDeleting) {
-                typingElement.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentWord.length) {
-                setTimeout(() => isDeleting = true, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-            }
-
-            const typingSpeed = isDeleting ? 100 : 150;
-            setTimeout(type, typingSpeed);
-        }
-        
-        document.addEventListener('DOMContentLoaded', type);
-
-        // --- Scroll Animations ---
-        const revealElements = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        revealElements.forEach(element => {
-            observer.observe(element);
-        });
-    </script>
+<script>
+const words = ["an AWS Cloud Enthusiast", "a Cloud Support Engineer Aspirant", "a Cloud Learner"];
+let i=0,j=0,del=false;
+const el=document.getElementById("typing-effect");
+(function type(){
+    el.textContent=words[i].substring(0,j+=(del?-1:1));
+    if(!del&&j==words[i].length)setTimeout(()=>del=true,1500);
+    if(del&&j==0){del=false;i=(i+1)%words.length;}
+    setTimeout(type,del?80:120);
+})();
+</script>
 
 </body>
 </html>
+
