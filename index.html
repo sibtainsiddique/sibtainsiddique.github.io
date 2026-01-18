@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sibtain Siddique | AWS Cloud Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sibtain Siddique | Portfolio</title>
 
-<!-- Tailwind CDN -->
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Icons -->
@@ -15,45 +15,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
 <style>
-  body{
-    margin:0;
-    font-family:'Inter',sans-serif;
-  }
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+}
 
-  /* 🔥 WRAPPER FIX */
-  #app{
-    min-height:100vh;
-    background: radial-gradient(circle at top, #4c1d95, #020617);
-    color:#e5e7eb;
-    overflow-x:hidden;
-  }
+/* 🔥 Wrapper fix (important for GitHub Pages) */
+#app{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 20% 10%, #6d28d9, transparent 40%),
+    radial-gradient(circle at 80% 30%, #9333ea, transparent 40%),
+    linear-gradient(180deg, #020617, #020617);
+  color:#e5e7eb;
+  overflow-x:hidden;
+}
 
-  .glass{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(16px);
-    border:1px solid rgba(255,255,255,0.15);
-  }
+.glass{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.15);
+}
 
-  .text-gradient{
-    background:linear-gradient(to right,#a855f7,#f59e0b);
-    -webkit-background-clip:text;
-    color:transparent;
-  }
+.text-gradient{
+  background:linear-gradient(to right,#a855f7,#f59e0b);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-  .glow:hover{
-    box-shadow:0 0 35px rgba(168,85,247,.6);
-  }
-
-  /* 🌊 Scroll Animation */
-  .reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all .9s ease;
-  }
-  .reveal.visible{
-    opacity:1;
-    transform:translateY(0);
-  }
+/* Fade animation */
+.fade-up{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s ease forwards;
+}
+@keyframes fadeUp{
+  to{opacity:1;transform:none;}
+}
 </style>
 </head>
 
@@ -61,90 +59,77 @@
 
 <div id="app">
 
-<!-- NAV -->
-<header class="fixed w-full z-50 bg-black/40 backdrop-blur border-b border-white/10">
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full z-50 bg-black/30 backdrop-blur border-b border-white/10">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="font-bold text-xl">Sibtain</span>
-    <div class="space-x-6 hidden md:block">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <!-- 🔥 LEFT TOP TEXT -->
+    <span class="font-semibold tracking-wide text-white">Portfolio</span>
+
+    <div class="space-x-6 hidden md:block text-sm text-gray-300">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#skills" class="hover:text-white">Skills</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
     </div>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center pt-28">
-  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center reveal">
-    <div>
-      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-gradient">
-        AWS Cloud<br>Portfolio
-      </h1>
-      <h2 class="text-2xl text-gray-300 mb-6">
-        I'm an <span id="typing"></span>
-      </h2>
-      <p class="text-lg text-gray-300 mb-6">
-        Hi, I'm <b>Sibtain Siddique</b> — aspiring
-        <b>Cloud Support Engineer</b> with hands-on AWS experience.
-      </p>
-      <a href="#contact" class="inline-block px-6 py-3 bg-purple-600 rounded-lg glow">
-        Contact Me
-      </a>
-    </div>
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+  <div class="max-w-3xl fade-up">
+    <!-- 🔥 CENTER NAME -->
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-gradient">
+      Sibtain Siddique
+    </h1>
 
-    <div class="glass rounded-2xl p-8 glow">
-      <h3 class="text-xl font-bold mb-4">AWS Stack</h3>
-      <ul class="space-y-3 text-gray-300">
-        <li>☁ EC2, S3, IAM, VPC</li>
-        <li>🚀 CloudFront CDN</li>
-        <li>🔐 IAM & Security</li>
-        <li>📈 High Availability</li>
-      </ul>
-    </div>
+    <!-- 🔥 TYPING ANIMATION -->
+    <h2 class="text-xl md:text-2xl text-gray-300 mb-8">
+      I'm an <span id="typing"></span>
+    </h2>
+
+    <p class="text-gray-400 max-w-xl mx-auto">
+      AWS Cloud Computing enthusiast focused on building scalable,
+      secure, and high-availability cloud solutions.
+    </p>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-24 reveal">
-  <div class="container mx-auto px-6 max-w-4xl">
-    <h2 class="text-4xl font-bold mb-6 text-gradient">About Me</h2>
-    <div class="glass p-8 rounded-xl">
+<section id="about" class="py-24">
+  <div class="container mx-auto px-6 max-w-4xl fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-gradient">About Me</h2>
+    <div class="glass rounded-xl p-8">
       <p class="text-gray-300 leading-relaxed">
         I am a BCA student and AWS Cloud Computing enthusiast.
         During my internship at <b>Ardent Computech</b>, I built and
         deployed a <b>Weather Web Application</b> using
-        <b>Amazon S3</b> and <b>AWS CloudFront</b>.
-        <br><br>
-        I am actively preparing for entry-level roles as a
-        <b>Cloud Support Engineer</b>.
+        Amazon S3 and AWS CloudFront.
       </p>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-24 reveal">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-10 text-gradient">Projects</h2>
+<section id="projects" class="py-24">
+  <div class="container mx-auto px-6 fade-up">
+    <h2 class="text-3xl font-bold mb-10 text-gradient">Projects</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="glass p-6 rounded-xl glow">
-        <h3 class="text-xl font-bold mb-2">Weather Web App</h3>
-        <p class="text-gray-300 text-sm">
-          Static website hosted on Amazon S3 and delivered globally
-          using AWS CloudFront CDN with real-time weather API.
+      <div class="glass p-6 rounded-xl">
+        <h3 class="font-bold mb-2">Weather Web App</h3>
+        <p class="text-gray-400 text-sm">
+          Static website hosted on S3 and delivered using CloudFront CDN.
         </p>
       </div>
-      <div class="glass p-6 rounded-xl opacity-60">More AWS Projects Soon</div>
-      <div class="glass p-6 rounded-xl opacity-60">Automation Labs Planned</div>
+      <div class="glass p-6 rounded-xl opacity-60">More Coming Soon</div>
+      <div class="glass p-6 rounded-xl opacity-60">AWS Labs</div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-24 reveal">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-10 text-gradient">Skills</h2>
+<section id="skills" class="py-24">
+  <div class="container mx-auto px-6 fade-up">
+    <h2 class="text-3xl font-bold mb-10 text-gradient">Skills</h2>
     <div class="flex flex-wrap gap-4">
       <span class="glass px-4 py-2 rounded">AWS</span>
       <span class="glass px-4 py-2 rounded">EC2</span>
@@ -152,48 +137,34 @@
       <span class="glass px-4 py-2 rounded">CloudFront</span>
       <span class="glass px-4 py-2 rounded">IAM</span>
       <span class="glass px-4 py-2 rounded">VPC</span>
-      <span class="glass px-4 py-2 rounded">HTML</span>
-      <span class="glass px-4 py-2 rounded">JavaScript</span>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-24 text-center reveal">
-  <h2 class="text-4xl font-bold mb-6 text-gradient">Get In Touch</h2>
-  <p class="text-gray-300 mb-2">
-    Open to Cloud Support Engineer opportunities
-  </p>
-  <p class="text-xl font-bold">sibtainsiddique777@gmail.com</p>
+<section id="contact" class="py-24 text-center fade-up">
+  <h2 class="text-3xl font-bold mb-6 text-gradient">Get In Touch</h2>
+  <p class="text-gray-300">sibtainsiddique777@gmail.com</p>
 </section>
 
-<footer class="py-6 text-center text-gray-400">
+<footer class="py-6 text-center text-gray-500">
   © 2026 Sibtain Siddique
 </footer>
 
 </div>
 
-<!-- 🔥 JS ANIMATIONS -->
+<!-- 🔥 Typing JS -->
 <script>
-/* Typing animation */
 const words=["AWS Cloud Enthusiast","Cloud Support Engineer Aspirant","AWS Learner"];
 let i=0,j=0,del=false;
 const el=document.getElementById("typing");
+
 (function type(){
   el.textContent=words[i].substring(0,j+=(del?-1:1));
-  if(!del&&j===words[i].length)setTimeout(()=>del=true,1200);
-  if(del&&j===0){del=false;i=(i+1)%words.length;}
-  setTimeout(type,del?80:120);
+  if(!del && j===words[i].length) setTimeout(()=>del=true,1200);
+  if(del && j===0){del=false;i=(i+1)%words.length;}
+  setTimeout(type, del?80:120);
 })();
-
-/* Scroll reveal */
-const reveals=document.querySelectorAll(".reveal");
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add("visible");
-  });
-},{threshold:.15});
-reveals.forEach(r=>observer.observe(r));
 </script>
 
 </body>
