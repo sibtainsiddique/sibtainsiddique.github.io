@@ -1,162 +1,190 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sibtain Siddique - AWS Cloud Enthusiast</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sibtain Siddique | AWS Cloud Enthusiast</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #e2e2e2;
-        }
-        .text-gradient {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(to right, #f59e0b, #f97316, #facc15);
-        }
-        .border-gradient {
-            border: 2px solid;
-            border-image-slice: 1;
-            border-image-source: linear-gradient(to right, #f59e0b, #f97316);
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .glow-on-hover:hover {
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
-            transform: translateY(-5px);
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: 0.8s;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+      color: #e5e5e5;
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #f59e0b, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
-<body class="antialiased">
+<body>
 
-<header class="bg-black/50 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-800">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-xl font-bold text-white">Sibtain Siddique</a>
-        <div class="hidden md:flex space-x-8">
-            <a href="#about">About</a>
-            <a href="#focus">Focus</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-gray-800">
+  <nav class="container mx-auto px-6 py-4 flex justify-between">
+    <h1 class="font-bold text-white">Sibtain Siddique</h1>
+    <div class="space-x-6 hidden md:block">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 </header>
 
+<!-- HERO -->
 <section class="min-h-screen flex items-center">
-    <div class="container mx-auto px-6">
-        <h1 class="text-6xl font-extrabold text-gradient mb-4">Sibtain Siddique</h1>
-        <h2 class="text-4xl text-gray-400 mb-6">
-            I'm <span id="typing-effect"></span>|
-        </h2>
-        <p class="max-w-xl text-lg text-gray-400">
-            AWS Cloud Computing enthusiast focused on building scalable, secure,
-            and high-availability cloud solutions.
-        </p>
-    </div>
+  <div class="container mx-auto px-6">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-gradient mb-4">
+      Sibtain Siddique
+    </h1>
+    <h2 class="text-3xl text-gray-400 mb-6">
+      I'm an <span id="typing"></span>
+    </h2>
+    <p class="max-w-xl text-lg text-gray-400">
+      AWS Cloud Computing enthusiast focused on building scalable, secure,
+      and high-availability cloud solutions.
+    </p>
+  </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="py-24 reveal">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">About Me</h2>
-        <p class="max-w-3xl text-lg text-gray-400">
-            I am a BCA student and cloud computing enthusiast with a strong focus
-            on <strong>Amazon Web Services (AWS)</strong>. I have hands-on experience
-            with EC2, S3, IAM, VPC, and CloudFront.
-            <br><br>
-            During my internship at <strong>Ardent Computech</strong>, I built and
-            deployed a <strong>Weather Web Application</strong> using Amazon S3
-            and AWS CloudFront, delivering content globally using CDN.
-        </p>
-    </div>
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="max-w-3xl text-gray-400 text-lg">
+      I am a BCA student and cloud computing enthusiast with a strong focus on
+      <strong>Amazon Web Services (AWS)</strong>.  
+      <br><br>
+      During my internship at <strong>Ardent Computech</strong>, I built and deployed
+      a <strong>Weather Web Application</strong> using
+      <strong>Amazon S3</strong> and <strong>AWS CloudFront</strong>.
+      I have hands-on experience with EC2, IAM, VPC and cloud fundamentals.
+    </p>
+  </div>
 </section>
 
+<!-- FOCUS -->
 <section id="focus" class="py-24 reveal">
-    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
-        <div class="glass-card p-6 text-center">
-            <i class="fas fa-cloud text-4xl text-orange-400 mb-4"></i>
-            <h3 class="text-xl font-bold">AWS Cloud Infrastructure</h3>
-            <p class="text-gray-400">Designing scalable cloud architecture on AWS</p>
-        </div>
-        <div class="glass-card p-6 text-center">
-            <i class="fas fa-server text-4xl text-yellow-400 mb-4"></i>
-            <h3 class="text-xl font-bold">Static Hosting & CDN</h3>
-            <p class="text-gray-400">S3 + CloudFront for performance & availability</p>
-        </div>
-        <div class="glass-card p-6 text-center">
-            <i class="fas fa-shield-alt text-4xl text-amber-400 mb-4"></i>
-            <h3 class="text-xl font-bold">Cloud Security</h3>
-            <p class="text-gray-400">IAM, best practices & cost optimization</p>
-        </div>
+  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+    <div class="glass p-6 rounded-lg text-center">
+      <i class="fas fa-cloud text-4xl text-orange-400 mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">AWS Cloud</h3>
+      <p class="text-gray-400">Core AWS services & architecture</p>
     </div>
+    <div class="glass p-6 rounded-lg text-center">
+      <i class="fas fa-server text-4xl text-yellow-400 mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">S3 & CloudFront</h3>
+      <p class="text-gray-400">Static hosting & CDN delivery</p>
+    </div>
+    <div class="glass p-6 rounded-lg text-center">
+      <i class="fas fa-shield-alt text-4xl text-amber-400 mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Security</h3>
+      <p class="text-gray-400">IAM, best practices & basics</p>
+    </div>
+  </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="py-24 reveal">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">Projects</h2>
-        <div class="glass-card p-6">
-            <h3 class="text-xl font-bold mb-2">Weather Web App using AWS CloudFront</h3>
-            <p class="text-gray-400">
-                Built and deployed a weather application using Amazon S3 for
-                static hosting and AWS CloudFront CDN with real-time API integration.
-            </p>
-        </div>
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6">Projects</h2>
+    <div class="glass p-6 rounded-lg">
+      <h3 class="text-xl font-bold mb-2">
+        Weather Web App using AWS CloudFront
+      </h3>
+      <p class="text-gray-400">
+        Hosted a static weather application on Amazon S3 and delivered content
+        globally using AWS CloudFront CDN with real-time API integration.
+      </p>
     </div>
+  </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="py-24 reveal">
-    <div class="container mx-auto px-6 flex flex-wrap gap-3">
-        <span class="bg-gray-800 px-4 py-2 rounded">AWS</span>
-        <span class="bg-gray-800 px-4 py-2 rounded">EC2</span>
-        <span class="bg-gray-800 px-4 py-2 rounded">S3</span>
-        <span class="bg-gray-800 px-4 py-2 rounded">CloudFront</span>
-        <span class="bg-gray-800 px-4 py-2 rounded">IAM</span>
-        <span class="bg-gray-800 px-4 py-2 rounded">VPC</span>
-        <span class="bg-gray-800 px-4 py-2 rounded">HTML</span>
-        <span class="bg-gray-800 px-4 py-2 rounded">JavaScript</span>
-    </div>
+  <div class="container mx-auto px-6 flex flex-wrap gap-3">
+    <span class="bg-gray-800 px-4 py-2 rounded">AWS</span>
+    <span class="bg-gray-800 px-4 py-2 rounded">EC2</span>
+    <span class="bg-gray-800 px-4 py-2 rounded">S3</span>
+    <span class="bg-gray-800 px-4 py-2 rounded">CloudFront</span>
+    <span class="bg-gray-800 px-4 py-2 rounded">IAM</span>
+    <span class="bg-gray-800 px-4 py-2 rounded">VPC</span>
+    <span class="bg-gray-800 px-4 py-2 rounded">HTML</span>
+    <span class="bg-gray-800 px-4 py-2 rounded">JavaScript</span>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="py-24 text-center reveal">
-    <p class="text-lg text-gray-400">Open to Cloud Support Engineer opportunities</p>
-    <p class="text-xl font-bold">sibtainsiddique777@gmail.com</p>
+  <p class="text-lg text-gray-400 mb-2">
+    Open to Cloud Support Engineer opportunities
+  </p>
+  <p class="text-xl font-bold">
+    sibtainsiddique777@gmail.com
+  </p>
 </section>
 
+<!-- FOOTER -->
+<footer class="py-6 text-center text-gray-500">
+  © 2026 Sibtain Siddique
+</footer>
+
+<!-- TYPING + REVEAL JS -->
 <script>
-const words = ["an AWS Cloud Enthusiast", "a Cloud Support Engineer Aspirant", "a Cloud Learner"];
-let i=0,j=0,del=false;
-const el=document.getElementById("typing-effect");
-(function type(){
-    el.textContent=words[i].substring(0,j+=(del?-1:1));
-    if(!del&&j==words[i].length)setTimeout(()=>del=true,1500);
-    if(del&&j==0){del=false;i=(i+1)%words.length;}
-    setTimeout(type,del?80:120);
-})();
+  /* Typing */
+  const words = ["AWS Cloud Enthusiast", "Cloud Support Engineer Aspirant", "Cloud Learner"];
+  let i = 0, j = 0, del = false;
+  const el = document.getElementById("typing");
+
+  function type() {
+    el.textContent = words[i].substring(0, j += del ? -1 : 1);
+    if (!del && j === words[i].length) setTimeout(() => del = true, 1500);
+    if (del && j === 0) { del = false; i = (i + 1) % words.length; }
+    setTimeout(type, del ? 80 : 120);
+  }
+  type();
+
+  /* Reveal */
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(r => observer.observe(r));
 </script>
 
 </body>
 </html>
-
