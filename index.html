@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sibtain Siddique | AWS Cloud Enthusiast</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sibtain Siddique | AWS Cloud Portfolio</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0a0a0a;
-      color: #e5e5e5;
-    }
-    .text-gradient {
-      background: linear-gradient(to right, #f59e0b, #f97316);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .glass {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-  </style>
+<style>
+body{
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top,#4c1d95,#020617);
+  color:#e5e7eb;
+  overflow-x:hidden;
+}
+.glass{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.15);
+}
+.text-gradient{
+  background:linear-gradient(to right,#a855f7,#f59e0b);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.glow:hover{
+  box-shadow:0 0 35px rgba(168,85,247,.6);
+}
+.orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  opacity:.5;
+  animation:float 12s infinite alternate;
+}
+@keyframes float{
+  from{transform:translateY(0)}
+  to{transform:translateY(-120px)}
+}
+</style>
 </head>
 
 <body>
 
+<!-- ORBS -->
+<div class="orb w-72 h-72 bg-purple-600 top-20 left-20"></div>
+<div class="orb w-96 h-96 bg-orange-500 bottom-20 right-20"></div>
+
 <!-- NAV -->
-<header class="sticky top-0 bg-black/80 border-b border-gray-800 z-50">
+<header class="fixed w-full z-50 bg-black/40 backdrop-blur border-b border-white/10">
   <nav class="container mx-auto px-6 py-4 flex justify-between">
-    <span class="font-bold">Sibtain Siddique</span>
+    <span class="font-bold text-xl">Sibtain</span>
     <div class="space-x-6 hidden md:block">
       <a href="#about">About</a>
-      <a href="#focus">Focus</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center">
-  <div class="container mx-auto px-6">
-    <h1 class="text-6xl md:text-7xl font-extrabold text-gradient mb-4">
-      Sibtain Siddique
-    </h1>
-    <h2 class="text-3xl text-gray-400 mb-6">
-      I'm an AWS Cloud Enthusiast
-    </h2>
-    <p class="max-w-xl text-lg text-gray-400">
-      AWS Cloud Computing enthusiast focused on building scalable,
-      secure, and high-availability cloud solutions.
-    </p>
+<section class="min-h-screen flex items-center pt-24">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-gradient">
+        AWS Cloud<br>Portfolio
+      </h1>
+      <p class="text-xl text-gray-300 mb-6">
+        Hi, I'm <b>Sibtain Siddique</b> — an aspiring
+        <b>Cloud Support Engineer</b> with hands-on AWS experience.
+      </p>
+      <div class="flex gap-4">
+        <a href="#contact" class="px-6 py-3 bg-purple-600 rounded-lg glow">Contact</a>
+        <a href="#resume" class="px-6 py-3 glass rounded-lg">Resume</a>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-8 glow">
+      <h3 class="text-xl font-bold mb-4">AWS Stack</h3>
+      <ul class="space-y-3 text-gray-300">
+        <li>☁ EC2, S3, IAM, VPC</li>
+        <li>🚀 CloudFront CDN</li>
+        <li>🔐 Security & IAM</li>
+        <li>📈 High Availability</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="py-24">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6">About Me</h2>
-    <p class="max-w-3xl text-gray-400 text-lg">
-      I am a BCA student and cloud computing enthusiast with a strong focus on
-      <strong>Amazon Web Services (AWS)</strong>.
-      <br><br>
-      During my internship at <strong>Ardent Computech</strong>, I built and deployed
-      a <strong>Weather Web Application</strong> using
-      <strong>Amazon S3</strong> and <strong>AWS CloudFront</strong>.
-      I have hands-on experience with EC2, IAM, VPC, and cloud fundamentals.
-    </p>
-  </div>
-</section>
-
-<!-- FOCUS -->
-<section id="focus" class="py-24 bg-black/40">
-  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
-    <div class="glass p-6 rounded text-center">
-      <i class="fas fa-cloud text-4xl text-orange-400 mb-4"></i>
-      <h3 class="text-xl font-bold mb-2">AWS Cloud</h3>
-      <p class="text-gray-400">Core AWS services & architecture</p>
-    </div>
-    <div class="glass p-6 rounded text-center">
-      <i class="fas fa-server text-4xl text-yellow-400 mb-4"></i>
-      <h3 class="text-xl font-bold mb-2">S3 & CloudFront</h3>
-      <p class="text-gray-400">Static hosting & CDN delivery</p>
-    </div>
-    <div class="glass p-6 rounded text-center">
-      <i class="fas fa-shield-alt text-4xl text-amber-400 mb-4"></i>
-      <h3 class="text-xl font-bold mb-2">Security</h3>
-      <p class="text-gray-400">IAM & best practices</p>
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h2 class="text-4xl font-bold mb-6 text-gradient">About Me</h2>
+    <div class="glass p-8 rounded-xl">
+      <p class="text-gray-300 leading-relaxed">
+        I am a BCA student and AWS Cloud Computing enthusiast.
+        During my internship at <b>Ardent Computech</b>, I built and
+        deployed a <b>Weather Web Application</b> using
+        <b>Amazon S3</b> and <b>AWS CloudFront</b>.
+        <br><br>
+        I am actively preparing for entry-level roles as a
+        <b>Cloud Support Engineer</b>.
+      </p>
     </div>
   </div>
 </section>
@@ -101,42 +113,56 @@
 <!-- PROJECTS -->
 <section id="projects" class="py-24">
   <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6">Projects</h2>
-    <div class="glass p-6 rounded">
-      <h3 class="text-xl font-bold mb-2">
-        Weather Web App using AWS CloudFront
-      </h3>
-      <p class="text-gray-400">
-        Hosted a static weather application on Amazon S3 and delivered
-        content globally using AWS CloudFront CDN with real-time API integration.
-      </p>
+    <h2 class="text-4xl font-bold mb-10 text-gradient">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-6 rounded-xl glow">
+        <h3 class="text-xl font-bold mb-2">Weather Web App</h3>
+        <p class="text-gray-300 text-sm">
+          Static website hosted on Amazon S3 and delivered globally
+          using AWS CloudFront CDN.
+        </p>
+      </div>
+      <div class="glass p-6 rounded-xl opacity-60">More AWS Projects Soon</div>
+      <div class="glass p-6 rounded-xl opacity-60">Automation Labs Planned</div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-24 bg-black/40">
-  <div class="container mx-auto px-6 flex flex-wrap gap-3">
-    <span class="bg-gray-800 px-4 py-2 rounded">AWS</span>
-    <span class="bg-gray-800 px-4 py-2 rounded">EC2</span>
-    <span class="bg-gray-800 px-4 py-2 rounded">S3</span>
-    <span class="bg-gray-800 px-4 py-2 rounded">CloudFront</span>
-    <span class="bg-gray-800 px-4 py-2 rounded">IAM</span>
-    <span class="bg-gray-800 px-4 py-2 rounded">VPC</span>
+<section id="skills" class="py-24">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-gradient">Skills</h2>
+    <div class="flex flex-wrap gap-4">
+      <span class="glass px-4 py-2 rounded">AWS</span>
+      <span class="glass px-4 py-2 rounded">EC2</span>
+      <span class="glass px-4 py-2 rounded">S3</span>
+      <span class="glass px-4 py-2 rounded">CloudFront</span>
+      <span class="glass px-4 py-2 rounded">IAM</span>
+      <span class="glass px-4 py-2 rounded">VPC</span>
+      <span class="glass px-4 py-2 rounded">HTML</span>
+      <span class="glass px-4 py-2 rounded">JavaScript</span>
+    </div>
   </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="py-24 text-center">
+  <h2 class="text-4xl font-bold mb-6 text-gradient">Resume</h2>
+  <a href="#" class="px-8 py-3 bg-purple-600 rounded-lg glow">
+    Download Resume
+  </a>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="py-24 text-center">
-  <p class="text-lg text-gray-400 mb-2">
+  <h2 class="text-4xl font-bold mb-6 text-gradient">Get In Touch</h2>
+  <p class="text-gray-300 mb-2">
     Open to Cloud Support Engineer opportunities
   </p>
-  <p class="text-xl font-bold">
-    sibtainsiddique777@gmail.com
-  </p>
+  <p class="text-xl font-bold">sibtainsiddique777@gmail.com</p>
 </section>
 
-<footer class="py-6 text-center text-gray-500">
+<footer class="py-6 text-center text-gray-400">
   © 2026 Sibtain Siddique
 </footer>
 
