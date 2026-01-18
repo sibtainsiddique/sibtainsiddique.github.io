@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sibtain Siddique | AWS Cloud Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sibtain Siddique | AWS Cloud Portfolio</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-body{
-  font-family:'Inter',sans-serif;
-  background:radial-gradient(circle at top,#4c1d95,#020617);
-  color:#e5e7eb;
-  overflow-x:hidden;
-}
-.glass{
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(16px);
-  border:1px solid rgba(255,255,255,0.15);
-}
-.text-gradient{
-  background:linear-gradient(to right,#a855f7,#f59e0b);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.glow:hover{
-  box-shadow:0 0 35px rgba(168,85,247,.6);
-}
-.orb{
-  position:absolute;
-  border-radius:50%;
-  filter:blur(80px);
-  opacity:.5;
-  animation:float 12s infinite alternate;
-}
-@keyframes float{
-  from{transform:translateY(0)}
-  to{transform:translateY(-120px)}
-}
-</style>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+    }
+
+    /* 🔥 IMPORTANT FIX */
+    #app{
+      min-height:100vh;
+      background: radial-gradient(circle at top, #4c1d95, #020617);
+      color:#e5e7eb;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,0.15);
+    }
+
+    .text-gradient{
+      background:linear-gradient(to right,#a855f7,#f59e0b);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .glow:hover{
+      box-shadow:0 0 35px rgba(168,85,247,.6);
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ORBS -->
-<div class="orb w-72 h-72 bg-purple-600 top-20 left-20"></div>
-<div class="orb w-96 h-96 bg-orange-500 bottom-20 right-20"></div>
+<!-- 🔴 WRAPPER (VERY IMPORTANT) -->
+<div id="app">
 
-<!-- NAV -->
-<header class="fixed w-full z-50 bg-black/40 backdrop-blur border-b border-white/10">
-  <nav class="container mx-auto px-6 py-4 flex justify-between">
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <span class="font-bold text-xl">Sibtain</span>
     <div class="space-x-6 hidden md:block">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -74,10 +74,9 @@ body{
         Hi, I'm <b>Sibtain Siddique</b> — an aspiring
         <b>Cloud Support Engineer</b> with hands-on AWS experience.
       </p>
-      <div class="flex gap-4">
-        <a href="#contact" class="px-6 py-3 bg-purple-600 rounded-lg glow">Contact</a>
-        <a href="#resume" class="px-6 py-3 glass rounded-lg">Resume</a>
-      </div>
+      <a href="#contact" class="inline-block px-6 py-3 bg-purple-600 rounded-lg glow">
+        Contact Me
+      </a>
     </div>
 
     <div class="glass rounded-2xl p-8 glow">
@@ -85,7 +84,7 @@ body{
       <ul class="space-y-3 text-gray-300">
         <li>☁ EC2, S3, IAM, VPC</li>
         <li>🚀 CloudFront CDN</li>
-        <li>🔐 Security & IAM</li>
+        <li>🔐 Security Best Practices</li>
         <li>📈 High Availability</li>
       </ul>
     </div>
@@ -116,13 +115,13 @@ body{
     <h2 class="text-4xl font-bold mb-10 text-gradient">Projects</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="glass p-6 rounded-xl glow">
-        <h3 class="text-xl font-bold mb-2">Weather Web App</h3>
+        <h3 class="text-xl font-bold mb-2">Weather Web Application</h3>
         <p class="text-gray-300 text-sm">
           Static website hosted on Amazon S3 and delivered globally
-          using AWS CloudFront CDN.
+          using AWS CloudFront CDN with real-time weather API.
         </p>
       </div>
-      <div class="glass p-6 rounded-xl opacity-60">More AWS Projects Soon</div>
+      <div class="glass p-6 rounded-xl opacity-60">More AWS Projects Coming Soon</div>
       <div class="glass p-6 rounded-xl opacity-60">Automation Labs Planned</div>
     </div>
   </div>
@@ -145,14 +144,6 @@ body{
   </div>
 </section>
 
-<!-- RESUME -->
-<section id="resume" class="py-24 text-center">
-  <h2 class="text-4xl font-bold mb-6 text-gradient">Resume</h2>
-  <a href="#" class="px-8 py-3 bg-purple-600 rounded-lg glow">
-    Download Resume
-  </a>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="py-24 text-center">
   <h2 class="text-4xl font-bold mb-6 text-gradient">Get In Touch</h2>
@@ -165,6 +156,9 @@ body{
 <footer class="py-6 text-center text-gray-400">
   © 2026 Sibtain Siddique
 </footer>
+
+</div>
+<!-- 🔴 END WRAPPER -->
 
 </body>
 </html>
