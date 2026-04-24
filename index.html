@@ -3,24 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sibtain Siddique | Portfolio</title>
+<title>Sibtain Siddique | Cloud Portfolio</title>
 
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
 
 <style>
 body{
   margin:0;
   font-family:'Inter',sans-serif;
 }
-
-/* 🔥 Wrapper fix (important for GitHub Pages) */
 #app{
   min-height:100vh;
   background:
@@ -28,22 +21,17 @@ body{
     radial-gradient(circle at 80% 30%, #9333ea, transparent 40%),
     linear-gradient(180deg, #020617, #020617);
   color:#e5e7eb;
-  overflow-x:hidden;
 }
-
 .glass{
   background:rgba(255,255,255,0.06);
   backdrop-filter:blur(16px);
   border:1px solid rgba(255,255,255,0.15);
 }
-
 .text-gradient{
   background:linear-gradient(to right,#a855f7,#f59e0b);
   -webkit-background-clip:text;
   color:transparent;
 }
-
-/* Fade animation */
 .fade-up{
   opacity:0;
   transform:translateY(40px);
@@ -56,20 +44,17 @@ body{
 </head>
 
 <body>
-
 <div id="app">
 
 <!-- NAVBAR -->
 <header class="fixed top-0 w-full z-50 bg-black/30 backdrop-blur border-b border-white/10">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- 🔥 LEFT TOP TEXT -->
-    <span class="font-semibold tracking-wide text-white">Portfolio</span>
-
+    <span class="font-semibold text-white">Portfolio</span>
     <div class="space-x-6 hidden md:block text-sm text-gray-300">
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#projects" class="hover:text-white">Projects</a>
-      <a href="#skills" class="hover:text-white">Skills</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
@@ -77,19 +62,20 @@ body{
 <!-- HERO -->
 <section class="min-h-screen flex items-center justify-center text-center px-6">
   <div class="max-w-3xl fade-up">
-    <!-- 🔥 CENTER NAME -->
     <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-gradient">
       Sibtain Siddique
     </h1>
 
-    <!-- 🔥 TYPING ANIMATION -->
-    <h2 class="text-xl md:text-2xl text-gray-300 mb-8">
+    <h2 class="text-xl md:text-2xl text-gray-300 mb-6">
       I'm an <span id="typing"></span>
     </h2>
 
-    <p class="text-gray-400 max-w-xl mx-auto">
-      AWS Cloud Computing enthusiast focused on building scalable,
-      secure, and high-availability cloud solutions.
+    <p class="text-gray-400 max-w-xl mx-auto mb-6">
+      Aspiring Cloud Support Engineer with hands-on experience in AWS services like EC2, S3, IAM, and CloudFront.
+    </p>
+
+    <p class="text-green-400 text-sm">
+      ✔ Open to internships & entry-level Cloud roles
     </p>
   </div>
 </section>
@@ -100,10 +86,11 @@ body{
     <h2 class="text-3xl font-bold mb-6 text-gradient">About Me</h2>
     <div class="glass rounded-xl p-8">
       <p class="text-gray-300 leading-relaxed">
-        I am a BCA student and AWS Cloud Computing enthusiast.
-        During my internship at <b>Ardent Computech</b>, I built and
-        deployed a <b>Weather Web Application</b> using
-        Amazon S3 and AWS CloudFront.
+        I am a BCA student and aspiring Cloud Support Engineer with hands-on experience in AWS services such as EC2, S3, IAM, and CloudFront.
+        <br><br>
+        During my internship at <b>Ardent Computech</b>, I built and deployed a Weather Web Application using AWS infrastructure.
+        <br><br>
+        I am currently focused on building real-world cloud projects and strengthening my skills in cloud computing, Linux, and networking.
       </p>
     </div>
   </div>
@@ -113,15 +100,38 @@ body{
 <section id="projects" class="py-24">
   <div class="container mx-auto px-6 fade-up">
     <h2 class="text-3xl font-bold mb-10 text-gradient">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Weather App -->
       <div class="glass p-6 rounded-xl">
-        <h3 class="font-bold mb-2">Weather Web App</h3>
-        <p class="text-gray-400 text-sm">
-          Static website hosted on S3 and delivered using CloudFront CDN.
+        <h3 class="font-bold mb-2">🌦️ Weather Web App (AWS)</h3>
+        <p class="text-gray-400 text-sm mb-3">
+          Built and deployed a weather application using AWS S3 and CloudFront.
+        </p>
+        <ul class="text-gray-400 text-xs mb-3 space-y-1">
+          <li>• Hosted static website on Amazon S3</li>
+          <li>• Configured CloudFront CDN</li>
+          <li>• Integrated weather API</li>
+        </ul>
+        <p class="text-yellow-400 text-xs">
+          ⚠️ Live demo unavailable (AWS free tier expired)
         </p>
       </div>
-      <div class="glass p-6 rounded-xl opacity-60">More Coming Soon</div>
-      <div class="glass p-6 rounded-xl opacity-60">AWS Labs</div>
+
+      <!-- EC2 Project -->
+      <div class="glass p-6 rounded-xl">
+        <h3 class="font-bold mb-2">🚀 EC2 Deployment Project</h3>
+        <p class="text-gray-400 text-sm mb-3">
+          Launched and configured an EC2 instance to deploy a web application.
+        </p>
+        <ul class="text-gray-400 text-xs space-y-1">
+          <li>• Launched Linux EC2 instance</li>
+          <li>• Connected using SSH</li>
+          <li>• Deployed website manually</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -130,13 +140,15 @@ body{
 <section id="skills" class="py-24">
   <div class="container mx-auto px-6 fade-up">
     <h2 class="text-3xl font-bold mb-10 text-gradient">Skills</h2>
+
     <div class="flex flex-wrap gap-4">
-      <span class="glass px-4 py-2 rounded">AWS</span>
-      <span class="glass px-4 py-2 rounded">EC2</span>
-      <span class="glass px-4 py-2 rounded">S3</span>
-      <span class="glass px-4 py-2 rounded">CloudFront</span>
+      <span class="glass px-4 py-2 rounded">AWS EC2</span>
+      <span class="glass px-4 py-2 rounded">AWS S3</span>
       <span class="glass px-4 py-2 rounded">IAM</span>
-      <span class="glass px-4 py-2 rounded">VPC</span>
+      <span class="glass px-4 py-2 rounded">CloudFront</span>
+      <span class="glass px-4 py-2 rounded">Linux</span>
+      <span class="glass px-4 py-2 rounded">Git & GitHub</span>
+      <span class="glass px-4 py-2 rounded">Networking Basics</span>
     </div>
   </div>
 </section>
@@ -144,7 +156,8 @@ body{
 <!-- CONTACT -->
 <section id="contact" class="py-24 text-center fade-up">
   <h2 class="text-3xl font-bold mb-6 text-gradient">Get In Touch</h2>
-  <p class="text-gray-300">sibtainsiddique777@gmail.com</p>
+  <p class="text-gray-300 mb-3">📧 sibtainsiddique777@gmail.com</p>
+  <p class="text-green-400">✔ Open to internships & entry-level Cloud roles</p>
 </section>
 
 <footer class="py-6 text-center text-gray-500">
@@ -153,9 +166,13 @@ body{
 
 </div>
 
-<!-- 🔥 Typing JS -->
 <script>
-const words=["AWS Cloud Enthusiast","Cloud Support Engineer Aspirant","AWS Learner"];
+const words=[
+"Aspiring Cloud Support Engineer (AWS)",
+"AWS EC2 • S3 • IAM • CloudFront",
+"Building Real-World Cloud Projects"
+];
+
 let i=0,j=0,del=false;
 const el=document.getElementById("typing");
 
