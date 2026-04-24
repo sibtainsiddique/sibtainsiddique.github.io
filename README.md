@@ -1,39 +1,62 @@
-Sibtain Siddique - Personal Portfolio
-Welcome to the GitHub repository for my personal portfolio website. This project showcases my skills, projects, and journey as a Cloud & DevOps enthusiast.
+# 👋 Hi, I'm Sibtain Siddique
 
-About This Project
-This is a single-page portfolio website designed to be a central hub for my professional presence. It is built to be modern, fully responsive, and performant. The design is a clean, dark-themed UI that highlights my focus on cloud technologies.
+🚀 Aspiring Cloud Support Engineer (AWS)  
+🎓 BCA Student | Cloud & DevOps Learner  
 
-Technologies Used
-This website was built using a simple and effective tech stack:
+---
 
-HTML5: For the core structure and content.
+## 🌐 Portfolio
 
-Tailwind CSS: For all styling and creating a responsive, mobile-first layout.
+🔗 https://sibtainsiddique.github.io/
 
-JavaScript: For dynamic features like the typing animation and scroll effects.
+---
 
-GitHub Pages: For hosting the website for free.
+## ☁️ About Me
 
-Features
-Modern UI/UX: A sleek, dark-themed design inspired by modern developer portfolios.
+I am an aspiring Cloud Support Engineer with hands-on experience in AWS services like EC2, S3, IAM, and CloudFront.
 
-Fully Responsive: The layout adapts perfectly to all screen sizes, from mobile phones to desktops.
+During my internship at **Ardent Computech**, I built and deployed a Weather Web Application using AWS infrastructure.
 
-Interactive Elements: Includes dynamic animations and hover effects to create an engaging user experience.
+I am currently focused on building real-world cloud projects and strengthening my skills in:
+- Cloud Computing (AWS)
+- Linux
+- Networking Fundamentals
+- DevOps Basics
 
-Cloud-Focused Content: The content is tailored to showcase my skills and projects in Microsoft Azure and DevOps.
+---
 
-How to Use
-This repository contains a single index.html file. To view the website locally:
+## 🚀 Projects
 
-Clone this repository or download the index.html file.
+### 🌦️ Weather Web App (AWS)
+- Hosted static website using **Amazon S3**
+- Configured **CloudFront CDN** for fast delivery
+- Integrated weather API for real-time data
 
-Open the index.html file in any modern web browser.
+⚠️ Note: Live demo is currently unavailable due to AWS free tier expiration.
 
-Let's Connect
-I'm always open to new opportunities and collaborations. Feel free to connect with me:
+---
 
-LinkedIn: linkedin.com/in/sibtainsiddique
+## 🛠️ Skills
 
-GitHub: github.com/sibtainsiddique
+**Cloud:** AWS (EC2, S3, IAM, CloudFront)  
+**Tools:** Git, GitHub  
+**OS:** Linux  
+**Concepts:** Networking, Cloud Fundamentals  
+
+---
+
+## 🎯 Goal
+
+To start my career as a **Cloud Support Engineer** and work on real-world cloud infrastructure and DevOps projects.
+
+---
+
+## 🤝 Connect with Me
+
+🔗 LinkedIn: https://linkedin.com/in/sibtainsiddique  
+💻 GitHub: https://github.com/sibtainsiddique  
+📧 Email: sibtainsiddique777@gmail.com  
+
+---
+
+⭐ If you like my work, feel free to connect and collaborate!
